@@ -4,7 +4,10 @@ template <typename T>
 class LinkedList
 {
 public:
-
+	//----------------------------------------------------
+	// Constructor
+	// Creates linked list and sets starting next and prev pointers
+	//----------------------------------------------------
 	LinkedList() 
 	{
 		start = new ListNode<T>();
@@ -15,6 +18,10 @@ public:
 		end->prev = start;
 	}
 	
+	//----------------------------------------------------
+	// Default destructor
+	// Deletes next and prev pointers
+	//----------------------------------------------------
 	~LinkedList() 
 	{
 		delete start;
@@ -22,6 +29,13 @@ public:
 
 	}
 
+	//----------------------------------------------------
+	// Inserts a node into the array and sets pointers so it fits in
+	// params:
+	//		Value: Template value to store in node
+	//		Prev: Prev pointer in the list
+	//		next: next pointer for list
+	//----------------------------------------------------
 	void insert(T value, ListNode<T>* prev, ListNode<T>* next)
 	{
 		ListNode<T>* n1 = new ListNode<T>();
@@ -33,16 +47,32 @@ public:
 		++nodeCount;
 	}
 
+	//----------------------------------------------------
+	// Calls insert() for the last index in the list
+	// params:
+	//		Value: Template value to store in node
+	//----------------------------------------------------
 	void PushBack(T value)
 	{
 		insert(value, end->prev, end);
 	}
 	
+	//----------------------------------------------------
+	// Calls insert() for first index in the list
+	// params:
+	//		Value: Template value to store in node
+	//----------------------------------------------------
 	void PushFront(T value)
 	{
 		insert(value, start, start->next);
 	}
 
+	//----------------------------------------------------
+	// Inserts a node into the array at a given index
+	// params:
+	//		index: Int that determines location in list to insert node 
+	//		value: Template value to store in node
+	//----------------------------------------------------
 	void IndexInsert(int index, T value)
 	{
 		ListNode<T>* current = start;
@@ -58,6 +88,12 @@ public:
 		insert(value, current, current->next);
 	}
 
+	//----------------------------------------------------
+	// checks if list is empty
+	// returns first value in the list
+	// returns:
+	//		T: templated value
+	//----------------------------------------------------
 	T First()
 	{
 		if (start->next == end)
@@ -72,6 +108,12 @@ public:
 		}
 	}
 
+	//----------------------------------------------------
+	// checks if list is empty
+	// returns last value in the list
+	// returns:
+	//		T: templated value
+	//----------------------------------------------------
 	T Last()
 	{
 		if (start->next == end)
@@ -86,11 +128,22 @@ public:
 		}
 	}
 
+	//----------------------------------------------------
+	// returns the size of the list
+	// returns:
+	//		nodeCount: returns the size of the list
+	//----------------------------------------------------
 	int Size()
 	{
 			return nodeCount;
 	}
 
+	//----------------------------------------------------
+	// checks if list is empty
+	// returns:
+	//		true: returns true if list is empty
+	//		false: returns false if list has data in it
+	//----------------------------------------------------
 	bool empty()
 	{
 		if (start->next == end)
@@ -99,6 +152,13 @@ public:
 			return false;
 	}
 
+	//----------------------------------------------------
+	// removes the last node on the list
+	// returns the data from the removed node
+	// returns:
+	//		tempData: Data from removed node
+	//		default: if no data returns nothing
+	//----------------------------------------------------
 	T popBack()
 	{
 		ListNode<T>* n = end->prev;
@@ -117,6 +177,13 @@ public:
 		
 	}
 
+	//----------------------------------------------------
+	// removes the first node on the list
+	// returns the data from the removed node
+	// returns:
+	//		tempData: Data from removed node
+	//		default: if no data returns nothing
+	//----------------------------------------------------
 	T popFront()
 	{
 		ListNode<T>* n = start->next;
@@ -134,12 +201,21 @@ public:
 
 	}
 
+	//----------------------------------------------------
+	// pops all nodes off the list
+	// clears entire node
+	//----------------------------------------------------
 	void clear() 
 	{
 		while (start->next != end)
 			popBack();
 	}
 
+	//----------------------------------------------------
+	// erases a node from the list
+	// Params:
+	//		index: which node to remove in the list
+	//----------------------------------------------------
 	void erase(int index)
 	{
 		ListNode<T>* current = start;
@@ -163,6 +239,12 @@ public:
 		--nodeCount;
 	}
 
+	//----------------------------------------------------
+	// removes all nodes with the given data
+	// 
+	// Params:
+	//		value: value to check for in nodes
+	//----------------------------------------------------
 	void remove(T value)
 	{
 		ListNode<T>* temp = nullptr;
@@ -187,6 +269,9 @@ public:
 		}
 	}
 	
+	//----------------------------------------------------
+	// Prints all data from each node
+	//----------------------------------------------------
 	void printList()
 	{
 		ListNode<T>* current = start->next;
@@ -197,10 +282,14 @@ public:
 		}
 	}
 
-
+	// int to count nodes
 	int nodeCount = 0;
+
+	// pointers for next and prev nodes
 	ListNode<T>* start;
 	ListNode<T>* end;
+	
+	// empty value for error checking 
 	T default; 
 };
 

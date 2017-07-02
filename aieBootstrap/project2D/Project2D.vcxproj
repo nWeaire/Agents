@@ -91,12 +91,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Agent1.cpp" />
     <ClCompile Include="Application2D.cpp" />
+    <ClCompile Include="BehaviourMachine.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Agent1.h" />
     <ClInclude Include="Application2D.h" />
+    <ClInclude Include="BehaviourMachine.h" />
+    <ClInclude Include="BehaviourState.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="IBehaviour.h" />
   </ItemGroup>

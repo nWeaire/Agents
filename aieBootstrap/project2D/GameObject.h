@@ -10,17 +10,10 @@ public:
 	GameObject() {};
 	~GameObject() {};
 
-	virtual void Update(float deltaTime)
-	{
-		for (int i = 0; i < m_behaviours.Size(); i++)
-			m_behaviours[i]->Update(this, deltaTime);
+	virtual void Update(float deltaTime) = 0;
 
-	}
-	virtual void Draw(Renderer2D m_renderer2D)
-	{
-
-	}
-
+	virtual void Draw(Renderer2D m_renderer2D) = 0;
+	
 
 protected:
 	DynamicArray<IBehaviour*> m_behaviours;
@@ -30,6 +23,6 @@ protected:
 	Vector2 m_velocity;
 	Vector2 m_position;
 
-
+	float deltaTime;
 };
 
