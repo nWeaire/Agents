@@ -62,7 +62,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -91,19 +91,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Agent1.cpp" />
     <ClCompile Include="Application2D.cpp" />
-    <ClCompile Include="BehaviourMachine.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Agent1.h" />
     <ClInclude Include="Application2D.h" />
-    <ClInclude Include="BehaviourMachine.h" />
+    <ClInclude Include="aStarNode.h" />
     <ClInclude Include="BehaviourState.h" />
+    <ClInclude Include="Defines.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GridNode.h" />
     <ClInclude Include="IBehaviour.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

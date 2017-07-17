@@ -27,12 +27,6 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Agent1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BehaviourMachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -44,13 +38,16 @@
     <ClInclude Include="IBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Agent1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BehaviourMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviourState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aStarNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

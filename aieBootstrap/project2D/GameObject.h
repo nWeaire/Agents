@@ -7,8 +7,8 @@ using namespace aie;
 class GameObject
 {
 public:
-	GameObject() {};
-	~GameObject() {};
+	GameObject();
+	~GameObject();
 
 	virtual void Update(float deltaTime) = 0;
 
