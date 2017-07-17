@@ -1,6 +1,6 @@
 #pragma once
 #include "aStarNode.h"
-#include <vector>
+#include "Heap.h"
 using namespace std;
 
 
@@ -10,14 +10,13 @@ public:
 	AStar();
 	~AStar();
 
-	bool CalculatePath(aStarNode* pStart, aStarNode* pEnd, vector<aStarNode*>* finishedPath);
+	bool CalculatePath(aStarNode* pStart, aStarNode* pEnd, Heap<aStarNode*>* finishedPath);
 
 
 private:
-	void SortOpenList(); // Make a heap
-
-	vector<aStarNode*> m_OpenList;
-	vector<bool> m_ClosedList;
+	
+	Heap<aStarNode*> m_OpenList;
+	Heap<bool> m_ClosedList;
 
 };
 

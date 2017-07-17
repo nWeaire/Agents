@@ -1,3 +1,2 @@
-﻿  Application2D.cpp
-c:\users\s171762\desktop\ai\aiebootstrap\project2d\application2d.cpp(39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  main.cpp
   Project2D.vcxproj -> C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Project2D.exe

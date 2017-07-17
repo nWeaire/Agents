@@ -92,17 +92,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp" />
+    <ClCompile Include="AStar.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h" />
+    <ClInclude Include="AStar.h" />
     <ClInclude Include="aStarNode.h" />
     <ClInclude Include="BehaviourState.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GridNode.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="IBehaviour.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
