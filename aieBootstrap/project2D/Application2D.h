@@ -3,6 +3,10 @@
 #include "Application.h"
 #include "Renderer2D.h"
 #include "Audio.h"
+
+struct GridNode;
+class AStar;
+
 class Application2D : public aie::Application {
 public:
 
@@ -24,4 +28,7 @@ protected:
 	GridNode** m_ppGrid;
 
 	float m_timer;
+
+	AStar* m_pAStar;
+
 };

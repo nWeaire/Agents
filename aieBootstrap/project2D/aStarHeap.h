@@ -2,20 +2,20 @@
 
 #include <math.h>
 #include "DynamicArray.h"
-template <typename T>
-class Heap
+#include "aStarNode.h"
+class aStarHeap
 {
 public:
-	Heap()
+	aStarHeap()
 	{
 	}
 
-	~Heap()
+	~aStarHeap()
 	{
 
 	}
 
-	void Push(T data)
+	void Push(aStarNode* data)
 	{
 		// Add data to end of array
 		m_Data.pushBack(data);
@@ -29,9 +29,9 @@ public:
 
 			int parent = GetParentIndex(current);
 
-			if (m_Data[current] < m_Data[parent])
+			if (m_Data[current]->m_nFScore < m_Data[parent]->m_nFScore)
 			{
-				T swap = m_Data[current];
+				aStarNode* swap = m_Data[current];
 				m_Data[current] = m_Data[parent];
 				m_Data[parent] = swap;
 
@@ -41,10 +41,10 @@ public:
 				break;
 		}
 	}
-	
-	T Pop()
+
+	aStarNode* Pop()
 	{
-		T result = m_Data[0];
+		aStarNode* result = m_Data[0];
 		// replace first element with last element
 		int last = m_Data.Size() - 1;
 		m_Data[0] = m_Data[last];
@@ -62,12 +62,12 @@ public:
 
 			int child1 = getChildIndex(current, 2);
 			int smallerChild = child0;
-			if (child1 <= last && m_Data[child1] < m_Data[smallerChild])
+			if (child1 <= last && m_Data[child1]->m_nFScore < m_Data[smallerChild]->m_nFScore)
 				smallerChild = child1;
-			
-			if (m_Data[smallerChild] < m_Data[current])
+
+			if (m_Data[smallerChild]->m_nFScore < m_Data[current]->m_nFScore)
 			{
-				T swap = m_Data[current];
+				aStarNode* swap = m_Data[current];
 				m_Data[current] = m_Data[smallerChild];
 				m_Data[smallerChild] = swap;
 
@@ -101,7 +101,7 @@ public:
 		return (2 * parentIndex) + whichChild;
 	}
 
-	bool Contains(T* pData)
+	bool Contains(aStarNode* pData)
 	{
 		for (int i = 0; i < m_Data.Size(); ++i)
 		{
@@ -111,8 +111,9 @@ public:
 		return false;
 	}
 
+
 private:
 
-	DynamicArray<T> m_Data;
+	DynamicArray<aStarNode*> m_Data;
 
 };

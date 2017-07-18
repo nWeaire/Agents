@@ -6,7 +6,7 @@
 struct GridNode : public aStarNode
 {
 public:
-	GridNode(Vector2 pos, int nIndexX, int nIndexY) : aStarNode()
+	GridNode(Vector2 pos, int nIndex, int nIndexX, int nIndexY) : aStarNode(nIndex)
 	{
 		m_v2Pos = pos;
 		m_nIndexX = nIndexX;

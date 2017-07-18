@@ -1,22 +1,20 @@
 #pragma once
 #include "aStarNode.h"
-#include "Heap.h"
-using namespace std;
-
-
+#include "aStarHeap.h"
+#include "DynamicArray.h"
 class AStar
 {
 public:
-	AStar();
+	AStar(int nMaxNodes);
 	~AStar();
 
-	bool CalculatePath(aStarNode* pStart, aStarNode* pEnd, Heap<aStarNode*>* finishedPath);
-
+	bool CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStarNode*>* finishedPath);
+	int CalcHeuristic(aStarNode* pCurrent, aStarNode* pEnd);
 
 private:
 	
-	Heap<aStarNode*> m_OpenList;
-	Heap<bool> m_ClosedList;
-
+	aStarHeap m_OpenList;
+	bool* m_ClosedList;
+	int maxNodes;
 };
 
