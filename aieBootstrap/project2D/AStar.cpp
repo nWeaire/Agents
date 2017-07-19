@@ -2,6 +2,21 @@
 #include "GridNode.h"
 #include <math.h>
 
+
+void AStar::setFucntion(CalcHeur func)
+{
+	myHeuristic = func;
+
+}
+
+int AStar::callFunction(aStarNode* pStart, aStarNode* pEnd)
+{
+	if (myHeuristic)
+		return myHeuristic(pStart, pEnd);
+	else
+		return 0;
+}
+
 AStar::AStar(int nMaxNodes)
 {
 	m_ClosedList = new bool[nMaxNodes];
@@ -25,7 +40,7 @@ bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStar
 	// Set start node's G score to zero
 	pStart->m_nGScore = 0;
 	// Calculate start node's H score(for now set to zero)
-	pStart->m_nHScore = CalcHeuristic(pStart, pEnd);
+	pStart->m_nHScore = callFunction(pStart, pEnd);
 	// Calculate start node's F score
 	pStart->m_nFScore = pStart->m_nGScore + pStart->m_nHScore;
 	// Set start node's m_pPrev to null.
@@ -63,6 +78,13 @@ bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStar
 			aStarNode* currentAdj = currentNode->m_AdjacentList[i]->m_pEndNode;
 
 			int nCost = currentNode->m_AdjacentList[i]->m_nCost;
+
+			// Skip walls
+			if (currentAdj->m_bBlocked)
+			{
+				continue;	
+			}
+
 			// Skip neighbours that are already in the closed list
 			if (m_ClosedList[currentAdj->m_nIndex])
 			{
@@ -89,7 +111,7 @@ bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStar
 					// Calculate G score
 				currentAdj->m_nGScore = currentNode->m_nGScore + nCost;
 					// Calculate H score
-				currentAdj->m_nHScore = CalcHeuristic(currentAdj, pEnd);
+				currentAdj->m_nHScore = callFunction(pStart, pEnd);
 					// Calculate F score
 				currentAdj->m_nFScore = currentAdj->m_nGScore + currentAdj->m_nHScore;
 					// Set Prev node pointer
@@ -103,11 +125,6 @@ bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStar
 	return false;
 }
 
-int AStar::CalcHeuristic(aStarNode* pCurrent, aStarNode* pEnd)
-{
-	int difX = ((GridNode*)pCurrent)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;
-	int difY = ((GridNode*)pCurrent)->m_nIndexY - ((GridNode*)pEnd)->m_nIndexY;
-	return (abs(difX) + abs(difY)) * 10;
-}
+
 
 

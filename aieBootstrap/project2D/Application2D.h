@@ -3,9 +3,9 @@
 #include "Application.h"
 #include "Renderer2D.h"
 #include "Audio.h"
-
+#include "Grid.h"
 struct GridNode;
-class AStar;
+
 
 class Application2D : public aie::Application {
 public:
@@ -25,10 +25,10 @@ protected:
 	aie::Texture*		m_shipTexture;
 	aie::Font*			m_font;
 
-	GridNode** m_ppGrid;
+	Grid* m_pGrid;
 
 	float m_timer;
 
-	AStar* m_pAStar;
+	
 
 };

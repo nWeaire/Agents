@@ -18,11 +18,13 @@ public:
 
 	aStarNode(int nIndex)
 	{
+		m_bBlocked = false;
 		m_pPrev = nullptr;
 		m_nGScore = 0;
 		m_nHScore = 0;
 		m_nFScore = 0;
 		m_nIndex = nIndex;
+		
 	}
 
 
@@ -33,8 +35,10 @@ public:
 	int m_nGScore;
 	int m_nHScore;
 	int m_nFScore;
+	
 	int m_nIndex;
 
+	bool m_bBlocked;
 
 	DynamicArray<aStarEdge*> m_AdjacentList;
 

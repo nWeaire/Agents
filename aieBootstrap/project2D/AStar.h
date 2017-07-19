@@ -1,7 +1,11 @@
 #pragma once
-#include "aStarNode.h"
 #include "aStarHeap.h"
 #include "DynamicArray.h"
+
+struct aStarNode;
+
+typedef int(*CalcHeur)(aStarNode*, aStarNode*);
+
 class AStar
 {
 public:
@@ -9,12 +13,17 @@ public:
 	~AStar();
 
 	bool CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStarNode*>* finishedPath);
-	int CalcHeuristic(aStarNode* pCurrent, aStarNode* pEnd);
+	
+	void setFucntion(CalcHeur func);
+	int callFunction(aStarNode* pStart, aStarNode* pEnd);
+	
 
-private:
+protected:
 	
 	aStarHeap m_OpenList;
 	bool* m_ClosedList;
 	int maxNodes;
+
+	CalcHeur myHeuristic = nullptr;
 };
 
