@@ -93,10 +93,12 @@
   <ItemGroup>
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="AStar.cpp" />
+    <ClCompile Include="Collider2D.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjectPool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h" />
@@ -104,12 +106,16 @@
     <ClInclude Include="aStarHeap.h" />
     <ClInclude Include="aStarNode.h" />
     <ClInclude Include="BehaviourState.h" />
+    <ClInclude Include="Collider2D.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="GridNode.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="IBehaviour.h" />
+    <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
