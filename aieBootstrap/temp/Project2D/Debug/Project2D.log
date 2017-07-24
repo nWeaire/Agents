@@ -1,10 +1,2 @@
 ﻿  Application2D.cpp
-  Generating Code...
-  Compiling...
-  main.cpp
-  Grid.cpp
-c:\users\s171762\desktop\ai\aiebootstrap\project2d\grid.cpp(32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  AStar.cpp
   Project2D.vcxproj -> C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Project2D.exe

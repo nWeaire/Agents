@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Decisions">
+      <UniqueIdentifier>{b8897906-d2c8-4876-914c-9188024bf017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aStar">
+      <UniqueIdentifier>{476812af-df16-4eb1-bf6f-993a334fa5de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ContainerClasses">
+      <UniqueIdentifier>{bd97081e-a283-42e3-ac0d-5a272d7ba636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{feeb4b6a-36ee-45df-ae42-6abee557fc56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
@@ -36,7 +48,31 @@
     <ClCompile Include="Collider2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectPool.cpp">
+    <ClCompile Include="DecisionButtonPressed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionPrint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionNothingPressed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionTreeClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Idle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowAgent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,47 +80,77 @@
     <ClInclude Include="Application2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DecisionButtonPressed.h">
+      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="IBehaviour.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DecisionNothingPressed.h">
+      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="BehaviourState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DecisionPrint.h">
+      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="aStarNode.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DecisionQuestion.h">
+      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="Defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GridNode.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DecisionTreeClass.h">
+      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
     <ClInclude Include="AStar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Heap.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\aStar</Filter>
     </ClInclude>
     <ClInclude Include="aStarHeap.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\aStar</Filter>
     </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Collider2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectPool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="aStarNode.h">
+      <Filter>Header Files\aStar</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDecision.h">
+      <Filter>Header Files\Decisions</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="GridNode.h">
+      <Filter>Header Files\aStar</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\aStar</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider2D.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviourState.h">
+      <Filter>Header Files\ContainerClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Header Files\aStar</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Idle.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FollowAgent.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>Header Files\Entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

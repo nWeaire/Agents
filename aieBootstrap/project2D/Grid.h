@@ -17,6 +17,9 @@ public:
 
 	void drawGrid(Renderer2D* m_2dRenderer);
 	
+	GridNode* getNode(int index);
+
+
 	Grid();
 	~Grid();
 private:

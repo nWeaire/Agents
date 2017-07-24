@@ -2,20 +2,7 @@
 #include <math.h>
 #include <crtdbg.h>
 
-int CalcHeuristic(aStarNode* pCurrent, aStarNode* pEnd)
-{
-	int difX = ((GridNode*)pCurrent)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;
-	int difY = ((GridNode*)pCurrent)->m_nIndexY - ((GridNode*)pEnd)->m_nIndexY;
-	difX = abs(difX);
-	difY = abs(difY);
 
-	if (difX > difY)
-		return (14 * difY) + 10 * (difX - difY);
-	else
-		return (14 * difX) + 10 * (difY - difX);
-	//return (abs(difX) + abs(difY)) * 10;
-
-}
 
 
 Grid::Grid()
@@ -133,9 +120,9 @@ Grid::Grid()
 
 
 
-	m_pAStar = new AStar(GRID_SIZE * GRID_SIZE);
+	//m_pAStar = new AStar(GRID_SIZE * GRID_SIZE);
 
-	m_pAStar->setFucntion(&CalcHeuristic);
+	
 }
 
 
@@ -147,7 +134,7 @@ Grid::~Grid()
 	}
 	delete[] m_ppGrid;
 
-	delete m_pAStar;
+	//delete m_pAStar;
 }
 
 void Grid::drawGrid(Renderer2D* m_2dRenderer)
@@ -183,7 +170,7 @@ void Grid::drawGrid(Renderer2D* m_2dRenderer)
 		}
 	}
 	// Draw Path
-	DynamicArray<aStarNode*> path;
+	/*DynamicArray<aStarNode*> path;
 	m_pAStar->CalculatePath(m_ppGrid[1], m_ppGrid[98], &path);
 
 	for (int i = 0; i < path.Size(); ++i)
@@ -193,6 +180,14 @@ void Grid::drawGrid(Renderer2D* m_2dRenderer)
 		m_2dRenderer->setRenderColour(0x00FF00FF);
 		m_2dRenderer->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 2, NODE_SIZE / 2);
 		m_2dRenderer->setRenderColour(0xFFFFFFFF);
-	}
+	}*/
+}
+
+GridNode* Grid::getNode(int index)
+{
+
+
+
+	return m_ppGrid[index];
 }
 
