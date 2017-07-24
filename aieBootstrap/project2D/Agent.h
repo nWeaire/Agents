@@ -4,7 +4,7 @@
 #include "Grid.h"
 #include "DynamicArray.h"
 #include "Collider2D.h"
-
+#include "Renderer2D.h"
 class Agent {
 public:
 
@@ -19,7 +19,7 @@ protected:
 	Vector2 m_position;
 	float m_mass;
 
-	
+	Renderer2D* m_2dRenderer;
 
 	Vector2 m_v2Pos;
 	AStar* m_pAStar;

@@ -39,8 +39,28 @@ FollowAgent::~FollowAgent()
 
 void FollowAgent::Update(float fDeltaTime)
 {
+
+
+
+
+
 }
 
 void FollowAgent::Draw(Renderer2D * m_2dRenderer)
 {
+	for (int i = 0; i < m_path.Size(); ++i)
+	{
+		GridNode* pNode = (GridNode*)m_path[i];
+
+		m_2dRenderer->setRenderColour(0x00FF00FF);
+		m_2dRenderer->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 2, NODE_SIZE / 2);
+		m_2dRenderer->setRenderColour(0xFFFFFFFF);
+	}
+
+	// Render Player
+	//m_2dRenderer->drawSpriteTransformed3x3(m_shipTexture, GlobalTransform);
+	m_2dRenderer->setRenderColour(0x00FFFFFF);
+	m_2dRenderer->drawBox(m_v2Pos.x, m_v2Pos.y, 30, 30);
+	m_2dRenderer->setRenderColour(0xFFFFFFFF);
+
 }
