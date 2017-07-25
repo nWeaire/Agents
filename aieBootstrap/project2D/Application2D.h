@@ -8,7 +8,7 @@
 struct GridNode;
 class DecisionTreeClass;
 class Player;
-
+class AIBehaviourTree;
 
 class Application2D : public aie::Application {
 public:
@@ -34,4 +34,6 @@ protected:
 	DecisionTreeClass* m_pDecisionTree;
 	Player* m_pPlayer;
 	FollowAgent* m_pFollowAgent;
+
+	AIBehaviourTree* m_BehaviourTree;
 };

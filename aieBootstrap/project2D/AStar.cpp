@@ -103,6 +103,9 @@ bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStar
 					currentAdj->m_nFScore = currentAdj->m_nGScore + currentAdj->m_nHScore;
 					// Update Prev Node.
 					currentAdj->m_pPrev = currentNode;
+
+					// sort heap
+
 				}
 					
 			}

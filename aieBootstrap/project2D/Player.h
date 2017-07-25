@@ -78,6 +78,7 @@ private:
 
 	DynamicArray<aStarNode*> m_path;
 
+	
 
 	int m_nNextNode;
 

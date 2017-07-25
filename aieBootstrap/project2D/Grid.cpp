@@ -19,12 +19,38 @@ Grid::Grid()
 			Vector2 pos(x * NODE_SIZE, y * NODE_SIZE);
 			m_ppGrid[index] = new GridNode(pos, index, x, y);
 
-			if (x % 3 == 0 && y != 5)
-			{
-				m_ppGrid[index]->m_bBlocked = true;
-			}
+			
 		}
 	}
+
+	m_ppGrid[11]->m_bBlocked = true;
+	m_ppGrid[12]->m_bBlocked = true;
+	m_ppGrid[13]->m_bBlocked = true;
+	m_ppGrid[14]->m_bBlocked = true;
+	m_ppGrid[15]->m_bBlocked = true;
+	m_ppGrid[16]->m_bBlocked = true;
+	m_ppGrid[17]->m_bBlocked = true;
+	m_ppGrid[18]->m_bBlocked = true;
+	m_ppGrid[21]->m_bBlocked = true;
+	m_ppGrid[31]->m_bBlocked = true;
+	m_ppGrid[41]->m_bBlocked = true;
+	m_ppGrid[51]->m_bBlocked = true;
+	m_ppGrid[61]->m_bBlocked = true;
+	m_ppGrid[71]->m_bBlocked = true;
+	m_ppGrid[81]->m_bBlocked = true;
+	m_ppGrid[82]->m_bBlocked = true;
+	m_ppGrid[83]->m_bBlocked = true;
+	m_ppGrid[84]->m_bBlocked = true;
+	m_ppGrid[85]->m_bBlocked = true;
+	m_ppGrid[86]->m_bBlocked = true;
+	m_ppGrid[87]->m_bBlocked = true;
+	m_ppGrid[88]->m_bBlocked = true;
+	m_ppGrid[28]->m_bBlocked = true;
+	m_ppGrid[38]->m_bBlocked = true;
+	m_ppGrid[48]->m_bBlocked = true;
+	m_ppGrid[68]->m_bBlocked = true;
+	m_ppGrid[78]->m_bBlocked = true;
+	m_ppGrid[88]->m_bBlocked = true;
 
 	for (int x = 0; x < GRID_SIZE; ++x)
 	{
@@ -134,7 +160,6 @@ Grid::~Grid()
 	}
 	delete[] m_ppGrid;
 
-	//delete m_pAStar;
 }
 
 void Grid::drawGrid(Renderer2D* m_2dRenderer)

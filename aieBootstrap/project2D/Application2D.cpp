@@ -8,6 +8,7 @@
 #include "aStarNode.h"
 #include "DecisionTreeClass.h"
 #include "Player.h"
+#include "AIBehaviourTree.h"
 using namespace aie;
 
 
@@ -36,11 +37,11 @@ bool Application2D::startup()
 
 	m_ppGrid = new Grid;
 
-
+	/*m_BehaviourTree = new AIBehaviourTree();*/
 	m_pFollowAgent = new FollowAgent(m_ppGrid);
 
 	//Decision Tree 
-	m_pDecisionTree = new DecisionTreeClass();
+	/*m_pDecisionTree = new DecisionTreeClass();*/
 	
 
 
@@ -52,8 +53,9 @@ void Application2D::shutdown()
 	delete m_ppGrid;
 	delete m_font;
 	delete m_2dRenderer;
-	delete m_pDecisionTree;
+	//delete m_pDecisionTree;
 	delete m_pFollowAgent;
+	//delete m_BehaviourTree;
 }
 
 void Application2D::update(float deltaTime) 
@@ -63,8 +65,8 @@ void Application2D::update(float deltaTime)
 	// input example
 	Input* input = Input::getInstance();
 
-	m_pDecisionTree->Update(nullptr, deltaTime);
-
+	//m_pDecisionTree->Update(nullptr, deltaTime);
+	//m_BehaviourTree->Update(deltaTime);
 	m_pFollowAgent->Update(deltaTime);
 	// exit the application
 	if (input->isKeyDown(INPUT_KEY_ESCAPE))
@@ -79,12 +81,12 @@ void Application2D::draw()
 	m_2dRenderer->setCameraPos(-400, -100);
 
 	m_2dRenderer->begin();
-	m_pFollowAgent->Draw(m_2dRenderer);
 
 	
+
 	// Draw
 	m_ppGrid->drawGrid(m_2dRenderer);
-	
+	m_pFollowAgent->Draw(m_2dRenderer);
 
 	// done drawing sprites
 	m_2dRenderer->end();

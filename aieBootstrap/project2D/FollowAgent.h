@@ -1,6 +1,9 @@
 #pragma once
 #include "Agent.h"
 #include "Texture.h"
+#include "StateMachine.h"
+#include "Idle.h"
+#include "Patrol.h"
 
 using namespace aie;
 
@@ -25,6 +28,7 @@ public:
 
 private:
 	aie::Texture*		m_shipTexture;
+	StateMachine*		m_StateMachine;
 
 };
 
