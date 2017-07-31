@@ -21,7 +21,7 @@ public:
 	//		DeltaTime: to make everything in seconds
 	//		takes in the state machine so it can call from its functions
 	//----------------------------------------------------
-	void OnUpdate(float fDeltaTime, StateMachine* pMachine);
+	void OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent);
 
 	//----------------------------------------------------
 	// Draw functions to run when draw function is called from state machine

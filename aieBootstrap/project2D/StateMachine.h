@@ -24,7 +24,7 @@ public:
 	// parameters:
 	//			deltaTime: Float to make everything in seconds
 	//----------------------------------------------------
-	void Update(float deltaTime);
+	void Update(float deltaTime, Agent* pAgent);
 	
 	//----------------------------------------------------
 	// Checks if onoff is true

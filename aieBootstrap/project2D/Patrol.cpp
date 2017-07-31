@@ -40,7 +40,7 @@ void Patrol::OnEnter(StateMachine * pMachine)
 
 }
 
-void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine)
+void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 {
 
 

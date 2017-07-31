@@ -1,18 +1,17 @@
 #pragma once
-
-#include "Renderer2D.h"
-
-class GameObject;
-using namespace aie;
+#include "Vector2.h"
+class Agent;
 
 class IBehaviour
 {
 public:
-	IBehaviour();
-	~IBehaviour();
+	IBehaviour(float fWeighting)
+	{
+		m_fWeighting = fWeighting;
+	}
 
-	virtual void Update(GameObject* agent, float deltaTime);
-
+	//Update function
+	virtual Vector2 calculate(Agent* pAgent, float fDeltaTime) = 0;
+	float m_fWeighting;
 
 };
-

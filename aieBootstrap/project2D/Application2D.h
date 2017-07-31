@@ -5,6 +5,7 @@
 #include "Audio.h"
 #include "Grid.h"
 #include "FollowAgent.h"
+#include "AI.h"
 struct GridNode;
 class DecisionTreeClass;
 class Player;
@@ -30,10 +31,11 @@ protected:
 
 	Grid* m_ppGrid;
 
+	float m_cameraX, m_cameraY;
 	float m_timer;
 	DecisionTreeClass* m_pDecisionTree;
 	Player* m_pPlayer;
 	FollowAgent* m_pFollowAgent;
-
+	AI*		m_pAI;
 	AIBehaviourTree* m_BehaviourTree;
 };

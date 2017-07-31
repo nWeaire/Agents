@@ -30,13 +30,13 @@ StateMachine::~StateMachine()
 // parameters:
 //			deltaTime: Float to make everything in seconds
 //----------------------------------------------------
-void StateMachine::Update(float deltaTime)
+void StateMachine::Update(float deltaTime, Agent* pAgent)
 {
 	if (m_CurrentStack.size() <= 0)
 		return;
 	
 
-	m_CurrentStack.top()->OnUpdate(deltaTime, this);
+	m_CurrentStack.top()->OnUpdate(deltaTime, this, pAgent);
 
 }
 

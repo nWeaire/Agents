@@ -32,7 +32,7 @@ FollowAgent::~FollowAgent()
 
 void FollowAgent::Update(float fDeltaTime)
 {
-	m_StateMachine->Update(fDeltaTime);
+	m_StateMachine->Update(fDeltaTime, this);
 
 
 }

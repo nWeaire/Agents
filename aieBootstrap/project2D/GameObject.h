@@ -2,6 +2,7 @@
 #include "Vector2.h"
 #include "IBehaviour.h"
 #include "DynamicArray.h"
+#include "Renderer2D.h"
 using namespace aie;
 
 class GameObject

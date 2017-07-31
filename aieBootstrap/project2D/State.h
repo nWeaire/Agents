@@ -1,5 +1,8 @@
 #pragma once
+#include "IBehaviour.h"
+#include "DynamicArray.h"
 #include "Renderer2D.h"
+#include "Agent.h"
 using namespace aie;
 
 class StateMachine;
@@ -34,7 +37,7 @@ public:
 	//		DeltaTime: to make everything in seconds
 	//		takes in the state machine so it can call from its functions
 	//----------------------------------------------------
-	virtual void OnUpdate(float fDeltaTime, StateMachine* pMachine) = 0;
+	virtual void OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent) = 0;
 	
 	//----------------------------------------------------
 	// Draw functions to run when draw function is called from state machine
@@ -50,5 +53,10 @@ public:
 	//----------------------------------------------------
 	virtual void OnExit(StateMachine* pMachine) = 0;
 
+
+
+protected:
+
+	DynamicArray<IBehaviour*> m_pBehaviourList;
 };
 

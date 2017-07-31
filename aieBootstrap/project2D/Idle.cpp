@@ -20,7 +20,7 @@ void Idle::OnEnter(StateMachine* pMachine)
 	pMachine->SetBackgroundRender(true);
 }
 
-void Idle::OnUpdate(float fDeltaTime, StateMachine * pMachine)
+void Idle::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 {
 	m_fTimer += fDeltaTime;
 

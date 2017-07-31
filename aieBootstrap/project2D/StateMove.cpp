@@ -1,6 +1,6 @@
 #include "StateMove.h"
-#include "seek.h"
-#include "flee.h"
+#include "Seek.h"
+#include "Flee.h"
 #include "Agent.h"
 
 

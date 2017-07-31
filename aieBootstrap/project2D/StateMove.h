@@ -1,6 +1,6 @@
 #pragma once
 #include "State.h"
-
+#include "Agent.h"
 class StateMove : public State
 {
 public:
