@@ -6,15 +6,27 @@ template <typename T>
 class Heap
 {
 public:
+	//-------------------------------------
+	// Default Constructor
+	//-------------------------------------
 	Heap()
 	{
 	}
 
+	//-------------------------------------
+	// Default Destructor
+	//-------------------------------------
 	~Heap()
 	{
 
 	}
 
+	//-------------------------------------
+	// Adds data to heap
+	// sorts heap from smallest to largest
+	// params:
+	//		data: Templated value to add to heap
+	//-------------------------------------
 	void Push(T data)
 	{
 		// Add data to end of array
@@ -29,6 +41,7 @@ public:
 
 			int parent = GetParentIndex(current);
 
+			//Checks if new value is smaller and sorts accordingly
 			if (m_Data[current] < m_Data[parent])
 			{
 				T swap = m_Data[current];
@@ -42,6 +55,11 @@ public:
 		}
 	}
 	
+	//-------------------------------------
+	// removes the value on top of heap and resorts
+	// returns:
+	//		T: returns templated value from heap
+	//-------------------------------------
 	T Pop()
 	{
 		T result = m_Data[0];
@@ -81,26 +99,57 @@ public:
 		return result;
 	}
 
+	//-------------------------------------
+	// Calls clear function from Dynamic array functions
+	//-------------------------------------
 	void Clear()
 	{
 		m_Data.Clear();
 	}
 
+	//-------------------------------------
+	// Calls Size function from dynamic array
+	//-------------------------------------
 	int GetSize()
 	{
 		return (int)m_Data.Size();
 	}
 
+	//-------------------------------------
+	// Returns the parent index
+	// params:
+	//		childIndex: 
+	// returns:
+	//		int: returns parent index
+	//
+	//-------------------------------------
 	int GetParentIndex(int childIndex)
 	{
 		return (childIndex - 1) / 2;
 	}
 
+	//-------------------------------------
+	// Returns the childs index
+	// params:
+	//		parentIndex: int for which parent 		
+	//		whichChild: int for which child
+	// returns:
+	//		int: returns index of a child
+	//
+	//-------------------------------------
 	int getChildIndex(int parentIndex, int whichChild)
 	{
 		return (2 * parentIndex) + whichChild;
 	}
 
+	//-------------------------------------
+	// Checks if pData is in the heap
+	// params:
+	//		pData: Checks if pData is in the heap
+	// returns:
+	//		bool: returns true if there in the heap
+	//
+	//-------------------------------------
 	bool Contains(T* pData)
 	{
 		for (int i = 0; i < m_Data.Size(); ++i)
@@ -112,7 +161,7 @@ public:
 	}
 
 private:
-
+	// Dynamic array of Data
 	DynamicArray<T> m_Data;
 
 };

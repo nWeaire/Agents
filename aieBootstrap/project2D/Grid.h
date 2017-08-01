@@ -9,18 +9,37 @@
 using namespace aie;
 
 
-
+// Class which creates and defines the grid
 class Grid
 {
 public:
 	
-
+	//-------------------------------------
+	// Draws 
+	// params:
+	//		m_2dRenderer: renderer which controls the generating of sprites
+	//-------------------------------------
 	void drawGrid(Renderer2D* m_2dRenderer);
 	
+
+	//-------------------------------------
+	// Calculates a path for an agent
+	// params:
+	//		index: 
+	// returns:
+	//		bool: if path is possible or not
+	//
+	//-------------------------------------
 	GridNode* getNode(int index);
 
-
+	//-------------------------------------
+	// default Constructor
+	//-------------------------------------
 	Grid();
+
+	//-------------------------------------
+	// default Destructor 
+	//-------------------------------------
 	~Grid();
 private:
 	

@@ -1,19 +1,19 @@
-#include "seek.h"
+#include "Seek.h"
 #include "Input.h"
 #include "Agent.h"
 
 using namespace aie;
 
-seek::seek(float fWeighting) : IBehaviour(fWeighting)
+Seek::Seek(float fWeighting) : IBehaviour(fWeighting)
 {
 }
 
 
-seek::~seek()
+Seek::~Seek()
 {
 }
 
-Vector2 seek::calculate(Agent* pAgent, float fDeltaTime)
+Vector2 Seek::calculate(Agent* pAgent, float fDeltaTime)
 {
 	int nMouseX;
 	int nMouseY;

@@ -4,6 +4,7 @@
 
 struct aStarNode;
 
+// AstarEdge struct Containing Endnode and cost of AstarNodes
 struct aStarEdge
 {
 	aStarNode* m_pEndNode;
@@ -12,6 +13,7 @@ struct aStarEdge
 
 };
 
+// Struct containing the aStarNodes data
 struct aStarNode
 {
 public:
@@ -28,21 +30,22 @@ public:
 	}
 
 
-
+	// pointer to the previous node
 	aStarNode* m_pPrev;
 
-
+	// ints containing G, H and F Scores
 	int m_nGScore;
 	int m_nHScore;
 	int m_nFScore;
 	
+	// Index of nodes
 	int m_nIndex;
 
 	bool m_bBlocked;
 
 	DynamicArray<aStarEdge*> m_AdjacentList;
 
-
+	// destructor, deletes entire list
 	virtual ~aStarNode()
 	{
 		for (int i = 0; i < m_AdjacentList.Size(); ++i)

@@ -13,6 +13,10 @@ enum EBehaviourResult
 class BehaviourNode
 {
 public:
+
+	//-------------------------------------
+	// Virtual function which executes result
+	//-------------------------------------
 	virtual EBehaviourResult Execute() = 0;
 
 

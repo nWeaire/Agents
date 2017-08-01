@@ -15,6 +15,11 @@ public:
 
 	}
 
+	//-------------------------------------
+	// pushes an aStarNode onto a heap
+	// params:
+	//		data: aStarNode to add to heap
+	//-------------------------------------
 	void Push(aStarNode* data)
 	{
 		// Add data to end of array
@@ -29,6 +34,7 @@ public:
 
 			int parent = GetParentIndex(current);
 
+			// Sorts heap to put lowest F score on top
 			if (m_Data[current]->m_nFScore < m_Data[parent]->m_nFScore)
 			{
 				aStarNode* swap = m_Data[current];
@@ -42,6 +48,12 @@ public:
 		}
 	}
 
+	//-------------------------------------
+	// Pops an aStarNode of the heap
+	// returns:
+	//		aStarNode: returns a aStarNode from the heap for use
+	//
+	//-------------------------------------
 	aStarNode* Pop()
 	{
 		aStarNode* result = m_Data[0];
@@ -81,26 +93,57 @@ public:
 		return result;
 	}
 
+	//-------------------------------------
+	// Calls clear function from Dynamic array functions
+	//-------------------------------------
 	void Clear()
 	{
 		m_Data.Clear();
 	}
 
+	//-------------------------------------
+	// Calls Size function from dynamic array
+	//-------------------------------------
 	int GetSize()
 	{
 		return (int)m_Data.Size();
 	}
 
+	//-------------------------------------
+	// Returns the parent index
+	// params:
+	//		childIndex: 
+	// returns:
+	//		int: returns parent index
+	//
+	//-------------------------------------
 	int GetParentIndex(int childIndex)
 	{
 		return (childIndex - 1) / 2;
 	}
 
+	//-------------------------------------
+	// Returns the childs index
+	// params:
+	//		parentIndex: int for which parent 		
+	//		whichChild: int for which child
+	// returns:
+	//		int: returns index of a child
+	//
+	//-------------------------------------
 	int getChildIndex(int parentIndex, int whichChild)
 	{
 		return (2 * parentIndex) + whichChild;
 	}
 
+	//-------------------------------------
+	// Checks if pData is in the heap
+	// params:
+	//		pData: Checks if pData is in the heap
+	// returns:
+	//		bool: returns true if there in the heap
+	//
+	//-------------------------------------
 	bool Contains(aStarNode* pData)
 	{
 		for (int i = 0; i < m_Data.Size(); ++i)
@@ -113,7 +156,7 @@ public:
 
 
 private:
-
+	// Dynamic array of aStarNodes for the heap to call function from
 	DynamicArray<aStarNode*> m_Data;
 
 };

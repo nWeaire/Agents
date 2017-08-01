@@ -10,7 +10,16 @@ using namespace aie;
 class FollowAgent :	public Agent
 {
 public:
+	//-------------------------------------
+	// Default Constructor
+	// Params:
+	//		ppGrid: Grid the followAgent acts on
+	//-------------------------------------
 	FollowAgent(Grid* ppGrid);
+
+	//-------------------------------------
+	// Default Destructor
+	//-------------------------------------
 	~FollowAgent();
 
 

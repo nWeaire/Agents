@@ -6,6 +6,8 @@
 class ExampleAction : public BehaviourNode
 {
 public:
+
+
 	ExampleAction(char* text)
 	{
 		m_szText = text;

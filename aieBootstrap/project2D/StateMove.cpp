@@ -6,7 +6,7 @@
 
 StateMove::StateMove()
 {
-	m_pBehaviourList.pushBack(new seek(0.75f));
+	m_pBehaviourList.pushBack(new Seek(0.75f));
 	m_pBehaviourList.pushBack(new flee(0.20f));
 }
 

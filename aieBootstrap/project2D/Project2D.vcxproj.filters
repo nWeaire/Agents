@@ -48,12 +48,6 @@
     <ClCompile Include="DecisionButtonPressed.cpp">
       <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
-    <ClCompile Include="DecisionNothingPressed.cpp">
-      <Filter>Source Files\DecisionTree</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionPrint.cpp">
-      <Filter>Source Files\DecisionTree</Filter>
-    </ClCompile>
     <ClCompile Include="StateMove.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
@@ -125,12 +119,6 @@
     <ClInclude Include="DecisionButtonPressed.h">
       <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="DecisionNothingPressed.h">
-      <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
-    <ClInclude Include="DecisionPrint.h">
-      <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
     <ClInclude Include="DecisionQuestion.h">
       <Filter>Header Files\Decisions</Filter>
     </ClInclude>
@@ -145,12 +133,6 @@
     </ClInclude>
     <ClInclude Include="aStarNode.h">
       <Filter>Header Files\aStar</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files\ContainerClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files\ContainerClasses</Filter>
     </ClInclude>
     <ClInclude Include="BaseDecision.h">
       <Filter>Header Files\Decisions</Filter>
@@ -171,9 +153,6 @@
       <Filter>Header Files\ContainerClasses</Filter>
     </ClInclude>
     <ClInclude Include="Collider2D.h">
-      <Filter>Header Files\ContainerClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="BehaviourState.h">
       <Filter>Header Files\ContainerClasses</Filter>
     </ClInclude>
     <ClInclude Include="Defines.h">
@@ -197,20 +176,8 @@
     <ClInclude Include="Composite.h">
       <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="Sequence.h">
-      <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
-    <ClInclude Include="Selector.h">
-      <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
-    <ClInclude Include="ExampleQuestion.h">
-      <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
     <ClInclude Include="AIBehaviourTree.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ExampleAction.h">
-      <Filter>Header Files\Decisions</Filter>
     </ClInclude>
     <ClInclude Include="Idle.h">
       <Filter>Header Files\States</Filter>
