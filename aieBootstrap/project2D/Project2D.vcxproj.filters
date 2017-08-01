@@ -28,70 +28,94 @@
     <Filter Include="Header Files\States">
       <UniqueIdentifier>{2afa9d01-1ebd-4021-97da-123dec151665}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\DecisionTree">
+      <UniqueIdentifier>{b21e73a8-ebe2-4b0a-9098-f08885940313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{9d758061-f463-478c-b071-9e7ff0acd306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entitiy">
+      <UniqueIdentifier>{56eb15fe-6852-4044-a735-02bb4209ee6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{a2a6eaa4-1884-45f4-9ec5-7cdd00d78832}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AStar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Collider2D.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DecisionTreeClass.cpp">
+      <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
     <ClCompile Include="DecisionButtonPressed.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionPrint.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
     <ClCompile Include="DecisionNothingPressed.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
-    <ClCompile Include="DecisionTreeClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Idle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FollowAgent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AIBehaviourTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Patrol.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Flee.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Seek.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DecisionPrint.cpp">
+      <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
     <ClCompile Include="StateMove.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Patrol.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Idle.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Flee.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Seek.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowAgent.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider2D.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="AI.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Application2D.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="AIBehaviourTree.cpp">
+      <Filter>Source Files\DecisionTree</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionAgent.cpp">
+      <Filter>Source Files\Entitiy</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionFlee.cpp">
+      <Filter>Source Files\DecisionTree</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionSeek.cpp">
+      <Filter>Source Files\DecisionTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Seeking.cpp">
+      <Filter>Source Files\States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,9 +215,6 @@
     <ClInclude Include="Idle.h">
       <Filter>Header Files\States</Filter>
     </ClInclude>
-    <ClInclude Include="StateMove.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AI.h">
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
@@ -208,6 +229,21 @@
     </ClInclude>
     <ClInclude Include="Seek.h">
       <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMove.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionAgent.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionSeek.h">
+      <Filter>Header Files\Decisions</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionFlee.h">
+      <Filter>Header Files\Decisions</Filter>
+    </ClInclude>
+    <ClInclude Include="Seeking.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

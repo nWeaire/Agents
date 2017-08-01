@@ -10,6 +10,6 @@ public:
 	DecisionButtonPressed();
 	virtual ~DecisionButtonPressed();
 
-	void MakeDecision(Entity* pEntity, float fDeltaTime);
+	void MakeDecision(Agent* pAgent, float fDeltaTime);
 };
 

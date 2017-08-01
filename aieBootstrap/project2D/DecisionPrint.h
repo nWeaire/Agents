@@ -10,7 +10,7 @@ public:
 	DecisionPrint();
 	virtual ~DecisionPrint();
 
-	void MakeDecision(Entity* pEntity, float fDeltaTime);
+	void MakeDecision(Agent* pAgent, float fDeltaTime);
 
 
 private:

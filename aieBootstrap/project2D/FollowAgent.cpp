@@ -3,7 +3,6 @@
 FollowAgent::FollowAgent(Grid* ppGrid)
 {
 	m_shipTexture = new Texture("./textures/tankRed.png");
-	m_velocity = 300.0f; // sets speed for use in update()
 	m_mass = 1; // sets a mass for the function
 
 	Box.SetTR(Vector2(37.5, 37.5)); // Sets TR value for AABB

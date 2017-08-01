@@ -1,14 +1,14 @@
 #include "DecisionTreeClass.h"
+#include "DecisionSeek.h"
 #include "DecisionButtonPressed.h"
-#include "DecisionNothingPressed.h"
-#include "DecisionPrint.h"
+#include "DecisionFlee.h"
 
 DecisionTreeClass::DecisionTreeClass()
 {
 	m_pRoot = new DecisionButtonPressed();
 
-	m_pRoot->m_pTrueDecision = new DecisionPrint();
-	m_pRoot->m_pFalseDecision = new DecisionNothingPressed();
+	m_pRoot->m_pTrueDecision = new DecisionSeek();
+	m_pRoot->m_pFalseDecision = new DecisionFlee();
 
 
 
@@ -24,9 +24,9 @@ DecisionTreeClass::~DecisionTreeClass()
 
 }
 
-void DecisionTreeClass::Update(Entity * pEntity, float fDeltaTime)
+void DecisionTreeClass::Update(Agent* pAgent, float fDeltaTime)
 {
-	m_pRoot->MakeDecision(pEntity, fDeltaTime);
+	m_pRoot->MakeDecision(pAgent, fDeltaTime);
 
 
 }

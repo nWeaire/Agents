@@ -15,7 +15,7 @@ flee::~flee()
 Vector2 flee::calculate(Agent* pAgent, float fDeltaTime)
 {
 	
-	Vector2  v2fleePos(200.0f, 200.0f);
+	Vector2  v2fleePos(800.0f, 400.0f);
 
 
 	Vector2 v2Dir =pAgent->getPos() - v2fleePos;
