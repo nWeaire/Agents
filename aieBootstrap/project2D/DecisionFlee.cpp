@@ -1,14 +1,18 @@
 #include "DecisionFlee.h"
 
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 DecisionFlee::DecisionFlee()
 {
-	m_pBehaviourList.pushBack(new flee(0.20f));
+	m_pBehaviourList.pushBack(new flee(0.80f));
 
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 DecisionFlee::~DecisionFlee()
 {
 
@@ -18,6 +22,12 @@ DecisionFlee::~DecisionFlee()
 	}
 }
 
+//-------------------------------------
+// function which makes a decision with 2 possible answers
+// params:
+//		pAgent: Agent that makes the descision
+//		fDeltaTime: deltaTime to control updates
+//-------------------------------------
 void DecisionFlee::MakeDecision(Agent * pAgent, float fDeltaTime)
 {
 

@@ -25,7 +25,9 @@ public:
 	virtual ~Entity() = 0;
 
 	//-------------------------------------
-	// Updates Global and Local tranforms of objects for movement, rotation and Scale
+	// Updates movement, scale and rotation of an object
+	// Param:
+	//		Deltatime: To make all values for movement relative to each other
 	//-------------------------------------
 	virtual void Update(float fDeltaTime) = 0;
 

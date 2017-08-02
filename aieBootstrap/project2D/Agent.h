@@ -37,6 +37,7 @@ public:
 	// Sets the new position of the vector
 	void setPos(Vector2 v2Pos) { m_v2Pos = v2Pos; };
 
+	Renderer2D* m_2dRenderer; // Renderer2D pointer
 
 
 protected:
@@ -47,8 +48,7 @@ protected:
 	Vector2 m_position; // Vector2 for position
 	float m_mass; // Float for mass
 
-	Renderer2D* m_2dRenderer; // Renderer2D pointer
-
+	
 	Vector2 m_v2Pos; // Vector2 for position
 	AStar* m_pAStar; 
 

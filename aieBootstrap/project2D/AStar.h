@@ -44,7 +44,7 @@ public:
 	void setFucntion(CalcHeur func);
 
 	//-------------------------------------
-	// Calculates the heuristic for the path
+	// Checks if function is valid and calls it
 	// params:
 	//		pStart: Starting node for heuristic
 	//		pEnd: Ending node for heuristic

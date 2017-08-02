@@ -72,9 +72,6 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Entitiy</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files\Entitiy</Filter>
-    </ClCompile>
     <ClCompile Include="FollowAgent.cpp">
       <Filter>Source Files\Entitiy</Filter>
     </ClCompile>
@@ -95,9 +92,6 @@
     </ClCompile>
     <ClCompile Include="Grid.cpp">
       <Filter>Source Files\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="AIBehaviourTree.cpp">
-      <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
     <ClCompile Include="DecisionAgent.cpp">
       <Filter>Source Files\Entitiy</Filter>
@@ -178,9 +172,6 @@
     </ClInclude>
     <ClInclude Include="Composite.h">
       <Filter>Header Files\Decisions</Filter>
-    </ClInclude>
-    <ClInclude Include="AIBehaviourTree.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Idle.h">
       <Filter>Header Files\States</Filter>

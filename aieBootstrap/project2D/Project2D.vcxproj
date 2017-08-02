@@ -92,7 +92,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AI.cpp" />
-    <ClCompile Include="AIBehaviourTree.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="Collider2D.cpp" />
@@ -104,7 +103,6 @@
     <ClCompile Include="Flee.cpp" />
     <ClCompile Include="Follow.cpp" />
     <ClCompile Include="FollowAgent.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="main.cpp" />
@@ -119,7 +117,6 @@
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AI.h" />
-    <ClInclude Include="AIBehaviourTree.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="AStar.h" />
     <ClInclude Include="aStarHeap.h" />

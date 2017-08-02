@@ -22,9 +22,10 @@ public:
 	//-------------------------------------
 	~FollowAgent();
 
-
 	//-------------------------------------
-	// Updates Global and Local tranforms of objects for movement, rotation and Scale
+	// Updates movement, scale and rotation of an object
+	// Param:
+	//		Deltatime: To make all values for movement relative to each other
 	//-------------------------------------
 	void Update(float fDeltaTime);
 

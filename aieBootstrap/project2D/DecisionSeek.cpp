@@ -1,14 +1,18 @@
 #include "DecisionSeek.h"
 #include "Seek.h"
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 DecisionSeek::DecisionSeek()
 {
 	m_pBehaviourList.pushBack(new Seek(0.75f));
 
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 DecisionSeek::~DecisionSeek()
 {
 	for (unsigned int i = 0; i < m_pBehaviourList.Size(); ++i)
@@ -18,6 +22,12 @@ DecisionSeek::~DecisionSeek()
 
 }
 
+//-------------------------------------
+// function which makes a decision with 2 possible answers
+// params:
+//		pAgent: Agent that makes the descision
+//		fDeltaTime: deltaTime to control updates
+//-------------------------------------
 void DecisionSeek::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	Vector2 v2force;

@@ -1,5 +1,10 @@
 #include "PatrolAgent.h"
 
+//-------------------------------------
+// Default Constructor
+// Params:
+//		ppGrid: Grid the followAgent acts on
+//-------------------------------------
 PatrolAgent::PatrolAgent(Grid* ppGrid)
 {
 	m_shipTexture = new Texture("./textures/tankRed.png");
@@ -15,7 +20,7 @@ PatrolAgent::PatrolAgent(Grid* ppGrid)
 	m_pAStar->setFucntion(&CalculateHeuristic);
 	m_nNextNode = 0;*/
 
-	m_StateMachine = new StateMachine();
+	m_StateMachine = new StateMachine(); 
 	m_StateMachine->AddState(0, new Follow(ppGrid));
 	m_StateMachine->AddState(1, new Idle);
 	m_StateMachine->PushState(0);
@@ -24,12 +29,19 @@ PatrolAgent::PatrolAgent(Grid* ppGrid)
 	
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 PatrolAgent::~PatrolAgent()
 {
 
 }
 
+//-------------------------------------
+// Updates movement, scale and rotation of an object
+// Param:
+//		Deltatime: To make all values for movement relative to each other
+//-------------------------------------
 void PatrolAgent::Update(float fDeltaTime)
 {
 	m_StateMachine->Update(fDeltaTime, this);
@@ -37,6 +49,11 @@ void PatrolAgent::Update(float fDeltaTime)
 
 }
 
+//-------------------------------------
+// Draws Objects
+// Params:
+//		m_2dRenderer for use renderering objects
+//-------------------------------------
 void PatrolAgent::Draw(Renderer2D * m_2dRenderer)
 {
 	m_StateMachine->Draw(m_2dRenderer);

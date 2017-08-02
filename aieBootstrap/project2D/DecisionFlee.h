@@ -19,7 +19,7 @@ public:
 
 
 	//-------------------------------------
-	// Virtual function which makes a decision with 2 possible answers
+	// function which makes a decision with 2 possible answers
 	// params:
 	//		pAgent: Agent that makes the descision
 	//		fDeltaTime: deltaTime to control updates

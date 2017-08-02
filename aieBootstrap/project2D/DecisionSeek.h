@@ -25,6 +25,7 @@ public:
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
 
 private:
+	// Dynamic array of behaviours to call action from
 	DynamicArray<IBehaviour*> m_pBehaviourList;
 
 };

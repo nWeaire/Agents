@@ -20,7 +20,7 @@ Vector2 Seek::calculate(Agent* pAgent, float fDeltaTime)
 	Input::getInstance()->getMouseXY(&nMouseX, &nMouseY);
 	Vector2  v2MousePos(nMouseX, nMouseY);
 
-	
+
 	Vector2 v2Dir = v2MousePos - pAgent->getPos();
 
 	v2Dir.normalise();

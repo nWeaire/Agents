@@ -2,34 +2,71 @@
 #include "GridNode.h"
 #include <math.h>
 
-
+//-------------------------------------
+// sets the calculate heuristic function to function pointer
+// params:
+//		func: variable to store function
+//-------------------------------------
 void AStar::setFucntion(CalcHeur func)
 {
+	// Sets function pointer
 	myHeuristic = func;
 
 }
 
+//-------------------------------------
+// Checks if function is valid and calls it
+// params:
+//		pStart: Starting node for heuristic
+//		pEnd: Ending node for heuristic
+// returns:
+//		int: returns the heuristic value or 0 if there is none
+//
+//-------------------------------------
 int AStar::callFunction(aStarNode* pStart, aStarNode* pEnd)
 {
+	// Checks if function is valid and calls it
 	if (myHeuristic)
 		return myHeuristic(pStart, pEnd);
 	else
 		return 0;
 }
 
+
+//-------------------------------------
+//	Constructor
+//	Params:
+//			nMaxNodes: int of max nodes of aStar path
+//-------------------------------------
 AStar::AStar(int nMaxNodes)
 {
+	// Creates closed list of bools
 	m_ClosedList = new bool[nMaxNodes];
 
+	// Sets maxNodes from user input
 	maxNodes = nMaxNodes;
 }
 
 
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 AStar::~AStar()
 {
-	delete[] m_ClosedList;
+	delete[] m_ClosedList; // Delete to avoid memory leaks
 }
 
+
+//-------------------------------------
+// Calculates a path for an agent
+// params:
+//		pStart: Starting node for aStar path
+//		pEnd: Ending node for aStar path
+//		finishedPath: a dynamic array to store the nodes of the finished aStar path
+// returns:
+//		bool: if path is possible or not
+//
+//-------------------------------------
 bool AStar::CalculatePath(aStarNode* pStart, aStarNode* pEnd, DynamicArray<aStarNode*>* finishedPath)
 {
 	// Clear open list

@@ -25,11 +25,11 @@ public:
 	void Update(float fDeltaTime);
 
 	//-------------------------------------
-	// function which makes a decision with 2 possible answers
+	// Draws AI
 	// params:
 	//		m_2dRenderer: handles the rendering of objects and sprites 
 	//-------------------------------------
-	void Draw(Renderer2D* Render);
+	void Draw(Renderer2D* m_2dRenderer);
 
 private:
 	// Pointer to a stateMachine to control AI's behaviours

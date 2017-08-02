@@ -3,18 +3,23 @@
 #include "DecisionButtonPressed.h"
 #include "DecisionFlee.h"
 
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 DecisionTreeClass::DecisionTreeClass()
 {
-	m_pRoot = new DecisionButtonPressed();
+	m_pRoot = new DecisionButtonPressed(); // Creates root question
 
-	m_pRoot->m_pTrueDecision = new DecisionSeek();
-	m_pRoot->m_pFalseDecision = new DecisionFlee();
+	m_pRoot->m_pTrueDecision = new DecisionSeek(); // creates true decision
+	m_pRoot->m_pFalseDecision = new DecisionFlee(); // creates false decison
 
 
 
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 DecisionTreeClass::~DecisionTreeClass()
 {
 	delete m_pRoot->m_pTrueDecision;
@@ -24,6 +29,12 @@ DecisionTreeClass::~DecisionTreeClass()
 
 }
 
+//-------------------------------------
+// function which updates the decision tree
+// params:
+//		pAgent: Agent that makes the descision
+//		fDeltaTime: deltaTime to control updates
+//-------------------------------------
 void DecisionTreeClass::Update(Agent* pAgent, float fDeltaTime)
 {
 	m_pRoot->MakeDecision(pAgent, fDeltaTime);

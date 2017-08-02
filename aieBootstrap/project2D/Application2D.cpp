@@ -22,29 +22,33 @@ Application2D::~Application2D()
 {
 }
 
+//-------------------------------------
+// Calls functions required for startup
+// returns:
+//		bool: if start was successful or not
+//
+//-------------------------------------
 bool Application2D::startup() 
 {
 
 
 
-	m_2dRenderer = new Renderer2D();
-	m_font = new Font("./font/consolas.ttf", 32);
+	m_2dRenderer = new Renderer2D(); // Creates instance of renderer2D
+	m_font = new Font("./font/consolas.ttf", 32); // Creates instance of Font
 
-	m_pAI = new AI;
+	m_pAI = new AI; // Creates instance of AI
 
-	m_timer = 0;
+	m_timer = 0; 
 
 	
 
-	m_ppGrid = new Grid;
+	m_ppGrid = new Grid; // Generates a new instance of a grid
 
-	/*m_BehaviourTree = new AIBehaviourTree();*/
-	m_pFollowAgent = new FollowAgent(m_ppGrid);
-	m_pPatrolAgent = new PatrolAgent(m_ppGrid);
+	/*m_BehaviourTree = new AIBehaviourTree();*/ 
+	m_pFollowAgent = new FollowAgent(m_ppGrid); // Creates instances of agent classes
+	m_pPatrolAgent = new PatrolAgent(m_ppGrid);	// Creates instances of agent classes
 
-	m_pDecisionAgent = new DecisionAgent;
-
-	//Decision Tree 
+	m_pDecisionAgent = new DecisionAgent; // Creates Agent that relys on decision tree
 
 	
 	m_cameraX = 0;
@@ -54,6 +58,8 @@ bool Application2D::startup()
 
 void Application2D::shutdown() 
 {
+
+	// Deletes to avoid memory leaks
 	delete m_ppGrid;
 	delete m_font;
 	delete m_2dRenderer;
@@ -62,6 +68,11 @@ void Application2D::shutdown()
 	//delete m_BehaviourTree;
 }
 
+//-------------------------------------
+// Calculates a path for an agent
+// params:
+//		DeltaTime: Updates in seconds rather then frames
+//-------------------------------------
 void Application2D::update(float deltaTime) 
 {
 	m_timer += deltaTime;
@@ -69,6 +80,8 @@ void Application2D::update(float deltaTime)
 	// input example
 	Input* input = Input::getInstance();
 
+	// Camera Controls
+	//------------------------------------------
 	if (input->isKeyDown(INPUT_KEY_UP))
 		m_cameraY += 500.0f * deltaTime;
 
@@ -80,10 +93,10 @@ void Application2D::update(float deltaTime)
 
 	if (input->isKeyDown(INPUT_KEY_RIGHT))
 		m_cameraX += 500.0f * deltaTime;
+	//------------------------------------------
 
-
+	// Calling update function on all created instances
 	m_pDecisionAgent->Update(deltaTime);
-	//m_BehaviourTree->Update(deltaTime);
 	m_pFollowAgent->Update(deltaTime);
 	m_pPatrolAgent->Update(deltaTime);
 	m_pAI->Update(deltaTime);
@@ -93,6 +106,11 @@ void Application2D::update(float deltaTime)
 		quit();
 }
 
+
+//-------------------------------------
+// Handles all rendering in game
+// Calls other classes draw functions
+//-------------------------------------
 void Application2D::draw() 
 {
 	// wipe the screen to the background colour
@@ -102,9 +120,10 @@ void Application2D::draw()
 	
 	m_2dRenderer->begin();
 	
-	
+	// Sets initial camera position
 	m_2dRenderer->setCameraPos(m_cameraX, m_cameraY);
-	// Draw
+	
+	// Calls Draw on all created instance classes
 	m_ppGrid->drawGrid(m_2dRenderer);
 	m_pFollowAgent->Draw(m_2dRenderer);
 	m_pPatrolAgent->Draw(m_2dRenderer);

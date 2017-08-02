@@ -1,5 +1,10 @@
 #include "FollowAgent.h"
 
+//-------------------------------------
+// Default Constructor
+// Params:
+//		ppGrid: Grid the followAgent acts on
+//-------------------------------------
 FollowAgent::FollowAgent(Grid* ppGrid)
 {
 	m_shipTexture = new Texture("./textures/tankRed.png");
@@ -23,12 +28,19 @@ FollowAgent::FollowAgent(Grid* ppGrid)
 
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 FollowAgent::~FollowAgent()
 {
-
+	delete m_StateMachine;
 }
 
+//-------------------------------------
+// Updates movement, scale and rotation of an object
+// Param:
+//		Deltatime: To make all values for movement relative to each other
+//-------------------------------------
 void FollowAgent::Update(float fDeltaTime)
 {
 	m_StateMachine->Update(fDeltaTime, this);
@@ -36,6 +48,11 @@ void FollowAgent::Update(float fDeltaTime)
 
 }
 
+//-------------------------------------
+// Draws Objects
+// Params:
+//		m_2dRenderer for use renderering objects
+//-------------------------------------
 void FollowAgent::Draw(Renderer2D * m_2dRenderer)
 {
 	m_StateMachine->Draw(m_2dRenderer);

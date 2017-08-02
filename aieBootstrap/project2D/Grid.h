@@ -23,7 +23,7 @@ public:
 	
 
 	//-------------------------------------
-	// Calculates a path for an agent
+	// Returns node at given index
 	// params:
 	//		index: 
 	// returns:

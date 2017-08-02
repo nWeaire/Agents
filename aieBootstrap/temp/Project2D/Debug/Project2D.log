@@ -1,5 +1,11 @@
-﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-Math Library.lib(Matrix3.obj) : warning LNK4099: PDB 'Math Library.pdb' was not found with 'Math Library.lib(Matrix3.obj)' or at 'C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Math Library.pdb'; linking object as if no debug info
-Math Library.lib(Vector2.obj) : warning LNK4099: PDB 'Math Library.pdb' was not found with 'Math Library.lib(Vector2.obj)' or at 'C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Math Library.pdb'; linking object as if no debug info
-Math Library.lib(Vector3.obj) : warning LNK4099: PDB 'Math Library.pdb' was not found with 'Math Library.lib(Vector3.obj)' or at 'C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Math Library.pdb'; linking object as if no debug info
+﻿  DecisionTreeClass.cpp
+  DecisionSeek.cpp
+c:\users\s171762\desktop\ai\aiebootstrap\project2d\decisionseek.cpp(18): warning C4018: '<': signed/unsigned mismatch
+c:\users\s171762\desktop\ai\aiebootstrap\project2d\decisionseek.cpp(34): warning C4018: '<': signed/unsigned mismatch
+  DecisionFlee.cpp
+c:\users\s171762\desktop\ai\aiebootstrap\project2d\decisionflee.cpp(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\s171762\desktop\ai\aiebootstrap\project2d\decisionflee.cpp(35): warning C4018: '<': signed/unsigned mismatch
+  DecisionButtonPressed.cpp
+  AI.cpp
+  Generating Code...
   Project2D.vcxproj -> C:\Users\s171762\Desktop\AI\aieBootstrap\temp\Project2D\Debug\Project2D.exe

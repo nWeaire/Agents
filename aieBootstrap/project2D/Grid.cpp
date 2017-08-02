@@ -4,12 +4,14 @@
 
 
 
-
+//-------------------------------------
+// default Constructor
+//-------------------------------------
 Grid::Grid()
 {
-
+	// Creates new grid of specified size
 	m_ppGrid = new GridNode*[GRID_SIZE * GRID_SIZE];
-
+	
 	for (int x = 0; x < GRID_SIZE; ++x)
 	{
 		for (int y = 0; y < GRID_SIZE; ++y)
@@ -23,6 +25,8 @@ Grid::Grid()
 		}
 	}
 
+	// Creates all Walls that the AI cant pass through
+	//-------------------------------------------------
 	m_ppGrid[11]->m_bBlocked = true;
 	m_ppGrid[12]->m_bBlocked = true;
 	m_ppGrid[13]->m_bBlocked = true;
@@ -51,6 +55,9 @@ Grid::Grid()
 	m_ppGrid[68]->m_bBlocked = true;
 	m_ppGrid[78]->m_bBlocked = true;
 	m_ppGrid[88]->m_bBlocked = true;
+	//-------------------------------------------------
+
+
 
 	for (int x = 0; x < GRID_SIZE; ++x)
 	{
@@ -151,7 +158,9 @@ Grid::Grid()
 	
 }
 
-
+//-------------------------------------
+// default Destructor 
+//-------------------------------------
 Grid::~Grid()
 {
 	for (int i = 0; i < GRID_SIZE * GRID_SIZE; ++i)
@@ -162,6 +171,11 @@ Grid::~Grid()
 
 }
 
+//-------------------------------------
+// Draws 
+// params:
+//		m_2dRenderer: renderer which controls the generating of sprites
+//-------------------------------------
 void Grid::drawGrid(Renderer2D* m_2dRenderer)
 {
 
@@ -208,6 +222,14 @@ void Grid::drawGrid(Renderer2D* m_2dRenderer)
 	}*/
 }
 
+//-------------------------------------
+// Returns node at given index
+// params:
+//		index: 
+// returns:
+//		bool: if path is possible or not
+//
+//-------------------------------------
 GridNode* Grid::getNode(int index)
 {
 
