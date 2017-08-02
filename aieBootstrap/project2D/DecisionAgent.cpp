@@ -24,7 +24,10 @@ void DecisionAgent::Update(float deltaTime)
 
 void DecisionAgent::Draw(Renderer2D * m_2dRenderer)
 {
-	m_2dRenderer->drawCircle(100, 100, 20);
+	m_2dRenderer->setRenderColour(0xAA00FFFF);
+	m_2dRenderer->drawCircle(m_v2Pos.x, m_v2Pos.y, 20.0f);
+	m_2dRenderer->setRenderColour(0xAA00FFFF);
+
 
 
 }

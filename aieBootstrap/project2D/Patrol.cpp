@@ -45,7 +45,7 @@ void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 
 
 	m_path.Clear();
-	m_pAStar->CalculatePath(m_ppGrid->getNode(1), m_ppGrid->getNode(53), &m_path);
+	m_pAStar->CalculatePath(m_ppGrid->getNode(0), m_ppGrid->getNode(99), &m_path);
 
 	//m_path[m_nNextNode]
 
@@ -88,14 +88,14 @@ void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 
 void Patrol::OnDraw(Renderer2D * m_2dRenderer)
 {
-	for (int i = 0; i < m_path.Size(); ++i)
+	/*for (int i = 0; i < m_path.Size(); ++i)
 	{
 		GridNode* pNode = (GridNode*)m_path[i];
 
 		m_2dRenderer->setRenderColour(0x00FF00FF);
 		m_2dRenderer->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 2, NODE_SIZE / 2);
 		m_2dRenderer->setRenderColour(0xFFFFFFFF);
-	}
+	}*/
 
 	// Render Player
 	//m_2dRenderer->drawSpriteTransformed3x3(m_shipTexture, GlobalTransform);

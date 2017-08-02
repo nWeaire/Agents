@@ -1,5 +1,7 @@
 #pragma once
 #include "BaseDecision.h"
+#include "DynamicArray.h"
+#include "IBehaviour.h"
 class DecisionSeek : public BaseDecision
 {
 public:
@@ -22,6 +24,8 @@ public:
 	//-------------------------------------
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
 
+private:
+	DynamicArray<IBehaviour*> m_pBehaviourList;
 
 };
 

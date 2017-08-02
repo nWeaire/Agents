@@ -1,0 +1,9 @@
+2 blue blocks are following aStar paths on grid
+
+red circle seeks mouse and flees from large purple circle using statemachine
+
+
+small purple cirlce:
+Hold s to seek mouse
+let go to flee from Large purple circle
+

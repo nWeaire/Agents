@@ -102,15 +102,16 @@
     <ClCompile Include="DecisionSeek.cpp" />
     <ClCompile Include="DecisionTreeClass.cpp" />
     <ClCompile Include="Flee.cpp" />
+    <ClCompile Include="Follow.cpp" />
     <ClCompile Include="FollowAgent.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Patrol.cpp" />
+    <ClCompile Include="PatrolAgent.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Seek.cpp" />
-    <ClCompile Include="Seeking.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="StateMove.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="Defines.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Flee.h" />
+    <ClInclude Include="Follow.h" />
     <ClInclude Include="FollowAgent.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="GridNode.h" />
@@ -143,9 +145,9 @@
     <ClInclude Include="IBehaviour.h" />
     <ClInclude Include="Idle.h" />
     <ClInclude Include="Patrol.h" />
+    <ClInclude Include="PatrolAgent.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Seek.h" />
-    <ClInclude Include="Seeking.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="StateMove.h" />

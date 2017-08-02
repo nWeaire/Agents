@@ -189,9 +189,9 @@ void Grid::drawGrid(Renderer2D* m_2dRenderer)
 			float otherY = otherNode->m_v2Pos.y;
 
 
-			m_2dRenderer->setRenderColour(0xFF0000FF);
+			/*m_2dRenderer->setRenderColour(0xFF0000FF);
 			m_2dRenderer->drawLine(x, y, otherX, otherY, 2.0f);
-			m_2dRenderer->setRenderColour(0xFFFFFFFF);
+			m_2dRenderer->setRenderColour(0xFFFFFFFF);*/
 		}
 	}
 	// Draw Path

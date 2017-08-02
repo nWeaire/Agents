@@ -1,6 +1,5 @@
 #pragma once
-
-class Agent;
+#include "Agent.h"
 
 class BaseDecision
 {

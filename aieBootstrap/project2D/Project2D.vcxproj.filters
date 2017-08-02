@@ -108,8 +108,11 @@
     <ClCompile Include="DecisionSeek.cpp">
       <Filter>Source Files\DecisionTree</Filter>
     </ClCompile>
-    <ClCompile Include="Seeking.cpp">
+    <ClCompile Include="Follow.cpp">
       <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PatrolAgent.cpp">
+      <Filter>Source Files\Entitiy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -209,8 +212,11 @@
     <ClInclude Include="DecisionFlee.h">
       <Filter>Header Files\Decisions</Filter>
     </ClInclude>
-    <ClInclude Include="Seeking.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="PatrolAgent.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Follow.h">
+      <Filter>Header Files\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

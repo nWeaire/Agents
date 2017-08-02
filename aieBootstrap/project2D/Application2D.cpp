@@ -40,7 +40,7 @@ bool Application2D::startup()
 
 	/*m_BehaviourTree = new AIBehaviourTree();*/
 	m_pFollowAgent = new FollowAgent(m_ppGrid);
-
+	m_pPatrolAgent = new PatrolAgent(m_ppGrid);
 
 	m_pDecisionAgent = new DecisionAgent;
 
@@ -58,6 +58,7 @@ void Application2D::shutdown()
 	delete m_font;
 	delete m_2dRenderer;
 	delete m_pFollowAgent;
+	delete m_pPatrolAgent;
 	//delete m_BehaviourTree;
 }
 
@@ -84,6 +85,7 @@ void Application2D::update(float deltaTime)
 	m_pDecisionAgent->Update(deltaTime);
 	//m_BehaviourTree->Update(deltaTime);
 	m_pFollowAgent->Update(deltaTime);
+	m_pPatrolAgent->Update(deltaTime);
 	m_pAI->Update(deltaTime);
 
 	// exit the application
@@ -105,9 +107,10 @@ void Application2D::draw()
 	// Draw
 	m_ppGrid->drawGrid(m_2dRenderer);
 	m_pFollowAgent->Draw(m_2dRenderer);
+	m_pPatrolAgent->Draw(m_2dRenderer);
 	m_pAI->Draw(m_2dRenderer);
 	m_pDecisionAgent->Draw(m_2dRenderer);
-
+	
 
 	m_2dRenderer->drawCircle(800.0f, 400.0f, 40);
 

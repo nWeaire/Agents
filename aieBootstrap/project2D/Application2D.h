@@ -7,7 +7,7 @@
 #include "FollowAgent.h"
 #include "AI.h"
 #include "DecisionAgent.h"
-
+#include "PatrolAgent.h"
 
 
 struct GridNode;
@@ -34,6 +34,7 @@ protected:
 	Grid*				m_ppGrid;
 	Player*				m_pPlayer;
 	FollowAgent*		m_pFollowAgent;
+	PatrolAgent*		m_pPatrolAgent;
 	AI*					m_pAI;
 	AIBehaviourTree*	m_BehaviourTree;
 	DecisionAgent*		m_pDecisionAgent;
