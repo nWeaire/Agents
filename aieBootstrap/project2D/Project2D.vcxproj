@@ -110,7 +110,6 @@
     <ClCompile Include="PatrolAgent.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Seek.cpp" />
-    <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="StateMove.cpp" />
   </ItemGroup>

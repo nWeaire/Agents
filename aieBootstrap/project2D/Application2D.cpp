@@ -13,11 +13,16 @@ using namespace aie;
 
 
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 Application2D::Application2D() 
 {
 }
 
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 Application2D::~Application2D() 
 {
 }

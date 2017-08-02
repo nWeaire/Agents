@@ -5,6 +5,15 @@
 #include <iostream>
 #include "Defines.h"
 #include "DynamicArray.h"
+
+//-------------------------------------
+// Calculates the heuristic value of the aStarPath
+// Param:
+//		pCurrent: Node at the beginning of the aStarPath
+//		pEnd: Node at the end of the aStarPath
+// Returns:
+//		int: Returns the heuristic of the aStarPath
+//-------------------------------------
 int CalcHeuristic(aStarNode* pCurrent, aStarNode* pEnd)
 {
 	int difX = ((GridNode*)pCurrent)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;

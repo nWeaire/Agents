@@ -1,6 +1,13 @@
 #include "Follow.h"
 
-
+//-------------------------------------
+// Calculates the heuristic value of the aStarPath
+// Param:
+//		pCurrent: Node at the beginning of the aStarPath
+//		pEnd: Node at the end of the aStarPath
+// Returns:
+//		int: Returns the heuristic of the aStarPath
+//-------------------------------------
 int Heuristic(aStarNode* pCurrent, aStarNode* pEnd)
 {
 	int difX = ((GridNode*)pCurrent)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;
@@ -16,7 +23,9 @@ int Heuristic(aStarNode* pCurrent, aStarNode* pEnd)
 
 }
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 Follow::Follow(Grid* ppGrid)
 {
 	m_ppGrid = ppGrid;
@@ -25,7 +34,9 @@ Follow::Follow(Grid* ppGrid)
 	m_nNextNode = 0;
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 Follow::~Follow()
 {
 
@@ -33,6 +44,11 @@ Follow::~Follow()
 
 }
 
+//----------------------------------------------------
+// functions to run when entering state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Follow::OnEnter(StateMachine * pMachine)
 {
 	m_fTimer = 0;
@@ -40,6 +56,12 @@ void Follow::OnEnter(StateMachine * pMachine)
 
 }
 
+//----------------------------------------------------
+// Update state when update function is called in State Machine
+// params:
+//		DeltaTime: to make everything in seconds
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Follow::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 {
 
@@ -86,6 +108,11 @@ void Follow::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 
 }
 
+//----------------------------------------------------
+// Draw functions to run when draw function is called from state machine
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Follow::OnDraw(Renderer2D * m_2dRenderer)
 {
 	//for (int i = 0; i < m_path.Size(); ++i)
@@ -106,6 +133,11 @@ void Follow::OnDraw(Renderer2D * m_2dRenderer)
 
 }
 
+//----------------------------------------------------
+// functions to run when exiting state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Follow::OnExit(StateMachine * pMachine)
 {
 

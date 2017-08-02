@@ -3,14 +3,18 @@
 #include "Flee.h"
 #include "Agent.h"
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 StateMove::StateMove()
 {
 	m_pBehaviourList.pushBack(new Seek(0.75f));
 	m_pBehaviourList.pushBack(new flee(0.20f));
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 StateMove::~StateMove()
 {
 	for (unsigned int i = 0; i < m_pBehaviourList.Size(); ++i)
@@ -19,13 +23,22 @@ StateMove::~StateMove()
 	}
 }
 
-//on enter
+//----------------------------------------------------
+// functions to run when entering state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void StateMove::OnEnter(StateMachine* pMachine)
 {
 
 }
 
-//on update
+//----------------------------------------------------
+// Update state when update function is called in State Machine
+// params:
+//		DeltaTime: to make everything in seconds
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void StateMove::OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent)
 
 {
@@ -48,13 +61,21 @@ void StateMove::OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent
 	pAgent->setPos(pAgent->getPos() + v2force);
 }
 
-// draw
+//----------------------------------------------------
+// Draw functions to run when draw function is called from state machine
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void StateMove::OnDraw(Renderer2D* m_2dRenderer)
 {
 
 }
 
-//on exit
+//----------------------------------------------------
+// functions to run when exiting state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void StateMove::OnExit(StateMachine* pMachine)
 {
 

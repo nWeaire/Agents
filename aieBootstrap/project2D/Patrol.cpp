@@ -1,6 +1,13 @@
 #include "Patrol.h"
 
-
+//-------------------------------------
+// Calculates the heuristic value of the aStarPath
+// Param:
+//		pCurrent: Node at the beginning of the aStarPath
+//		pEnd: Node at the end of the aStarPath
+// Returns:
+//		int: Returns the heuristic of the aStarPath
+//-------------------------------------
 int CalculateHeuristic(aStarNode* pCurrent, aStarNode* pEnd)
 {
 	int difX = ((GridNode*)pCurrent)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;
@@ -16,7 +23,9 @@ int CalculateHeuristic(aStarNode* pCurrent, aStarNode* pEnd)
 
 }
 
-
+//-------------------------------------
+// Default Constructor
+//-------------------------------------
 Patrol::Patrol(Grid* ppGrid)
 {
 	m_ppGrid = ppGrid;
@@ -25,7 +34,9 @@ Patrol::Patrol(Grid* ppGrid)
 	m_nNextNode = 0;
 }
 
-
+//-------------------------------------
+// Default Destructor
+//-------------------------------------
 Patrol::~Patrol()
 {
 
@@ -33,6 +44,11 @@ Patrol::~Patrol()
 
 }
 
+//----------------------------------------------------
+// functions to run when entering state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Patrol::OnEnter(StateMachine * pMachine)
 {
 	m_fTimer = 0;
@@ -40,6 +56,12 @@ void Patrol::OnEnter(StateMachine * pMachine)
 
 }
 
+//----------------------------------------------------
+// Update state when update function is called in State Machine
+// params:
+//		DeltaTime: to make everything in seconds
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 {
 
@@ -86,6 +108,11 @@ void Patrol::OnUpdate(float fDeltaTime, StateMachine * pMachine, Agent* pAgent)
 
 }
 
+//----------------------------------------------------
+// Draw functions to run when draw function is called from state machine
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Patrol::OnDraw(Renderer2D * m_2dRenderer)
 {
 	/*for (int i = 0; i < m_path.Size(); ++i)
@@ -106,6 +133,11 @@ void Patrol::OnDraw(Renderer2D * m_2dRenderer)
 
 }
 
+//----------------------------------------------------
+// functions to run when exiting state
+// params:
+//		takes in the state machine so it can call from its functions
+//----------------------------------------------------
 void Patrol::OnExit(StateMachine * pMachine)
 {
 

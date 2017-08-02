@@ -54,9 +54,6 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
     <ClCompile Include="Patrol.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
